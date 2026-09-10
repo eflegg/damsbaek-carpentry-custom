@@ -33,10 +33,6 @@ window.addEventListener("pageswap", (event) => {
 
 
  
-
-
-
-
 //Adding the data attribute for the slug to use later. Find the custom class on the listing blocks, target the link, get the href then the slug
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -63,63 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// OUTGOING PAGE - name only the card the user actually clicked
-// window.addEventListener("pageswap", (event) => {
-//   if (!event.viewTransition) return;
 
-//   // Figure out which link was clicked from the navigation URL
-//   const url = new URL(event.activation.entry.url);
-//   const slug = url.pathname.split('/').filter(Boolean).pop();
-//   // const slug = url.searchParams.get("slug");
-//   console.log("clicked slug: ", slug);
-//   if (!slug) return;
-
-//   // Find that specific card and name it - right now, not in CSS
-//   const clicked = document.querySelector(`.project-link>a[data-slug="${slug}"]`);
-//   // if (clicked) {
-//     clicked.style.viewTransitionName = `project-transition-${slug}`;
-//     clicked.style.viewTransitionClass = `project-transition-${slug}`;
-  //}
-
-  // Clean up after the transition finishes (or fails)
-  // event.viewTransition.finished.then(() => {
-  //   if (clicked) {
-  //     clicked.style.viewTransitionName = "";
-  //     clicked.style.viewTransitionClass = "";
-  //   }
-  // });
-// });
-
-// INCOMING PAGE - match the name from the outgoing page
-window.addEventListener("pagereveal", (event) => {
-if (!event.viewTransition) {
-    console.log(
-      "No view transition - page didn't opt in or browser skipped it",
-    );
-    return;
-  }
-
-  // Pull the ID from our own URL
-  // const url = new URL(window.location.href);
-  // const destSlug = window.location.pathname.split('/').filter(Boolean).pop();
-  // console.log("dest slug: ", destSlug); //this is mostly returning correctly
-  // if (!destSlug) return;
-
-  // Name the hero element to match the card that was clicked
-  // const hero = document.querySelector(`.project-hero[data-slug="${destSlug}"]`);
-  // //if (hero) {
-  //       hero.style.viewTransitionName = `project-transition-${destSlug}`;
-  //   hero.style.viewTransitionClass = `project-transition-${destSlug}`;
- // }
-
-  // Clean up when done - element goes back to being unnamed
-  // event.viewTransition.finished.then(() => {
-  //   if (hero) {
-  //     hero.style.viewTransitionName = "";
-  //     hero.style.viewTransitionClass = "";
-  //   }
-  // });
-});
 
 
 

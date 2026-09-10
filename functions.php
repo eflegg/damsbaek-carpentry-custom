@@ -65,12 +65,14 @@ function add_view_transition_to_post_thumbnail($html, $post_id, $post_thumbnail_
     $transition_name = 'project-image-transition-' . esc_attr($post_id);
 
     // Inject the style attribute into the <img> tag
-    $style = 'style="view-transition-name: ' . $transition_name . ';"';
+    $style = 'style="view-transition-class: project-transition-class;view-transition-name: ' . $transition_name . ';"';
     $html  = str_replace('<img ', '<img ' . $style . ' ', $html);
 
     return $html;
 }
 add_filter('post_thumbnail_html', 'add_view_transition_to_post_thumbnail', 10, 5);
+
+
 
 
 

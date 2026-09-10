@@ -7,6 +7,25 @@ img {
   object-fit: cover;
 }
 
+header {
+  background: var(--wp--preset--color--custom-cream);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+header.scroll-up {
+  position: sticky;
+  top: 0;
+  transition: all 0.25s ease-out;
+  border-bottom: 1px solid black;
+}
+header.scroll-down {
+  position: relative;
+  top: 0;
+  transition: all 0.25s ease-in;
+  border-bottom: 0px;
+}
+
 .client-intake-form input {
   height: 50px;
   border: 1px solid black;
@@ -130,6 +149,46 @@ nf-field {
   transition: transform 0.25s ease-in-out;
 }
 
+/* The asterisk (*) is a wildcard - matches any name with class "card" */
+::view-transition-group(*.project-transition-class) {
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Fix the taffy problem for ALL cards at once */
+::view-transition-old(*.project-transition-class),
+::view-transition-new(*.project-transition-class) {
+  object-fit: cover;
+  overflow: hidden;
+}
+
+::view-transition-old(root) {
+  animation: 500ms ease-out both fade-out;
+}
+
+/* Target the incoming root view */
+::view-transition-new(root) {
+  /* Delay the fade-in until the fade-out completes */
+  animation: 500ms ease-in 200ms both fade-in;
+}
+
+/* this is to make it fade in and out nicely, not the crappy crossfade */
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* Opt-in for cross-document transitions */
 @view-transition {
   navigation: auto;

@@ -7,9 +7,7 @@ console.log("Current Post ID:", wpData.postId);
 
  const linkTags = document.querySelectorAll('a');
  const updatedLinkTags = Array.prototype.slice.call(linkTags);
-//  console.log('updated ', updatedLinkTags);
-//  const finalTags = updatedLinkTags.shift();
-//  console.log('final tags ', finalTags);
+
 
  updatedLinkTags.forEach(el => {
   el.classList.add('fade');
@@ -18,42 +16,55 @@ const links = document.querySelectorAll('a.fade');
 const main = document.querySelector('.wp-theme-damsbaek-carpentry-custom');
 //uses custom theme class that is already auto added to body tag of each page
 
-for (let i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', function(event){
-        event.preventDefault();
-        const href = this.getAttribute('href');
-        main.classList.add('fade-out');
-        console.log('added fade-out')
-        setTimeout(() => {
-            window.location.href = href;
-            console.log('changes pages');
-        }, 900);
-    });
-}
-
-});
-
-
-
-//bits from old page transition
-  
-// there are a bunch of next links on this page, not just one. add event listener to each one
-// for (let i = 0; i < nextLink.length; i++) {
-//     nextLink[i].addEventListener('click', function(event) {
-//         console.log(nextLink[i]);
+// for (let i = 0; i < links.length; i++) {
+//     links[i].addEventListener('click', function(event){
 //         event.preventDefault();
 //         const href = this.getAttribute('href');
-//         // main.classList.add('fade-out');
-//         // nextSection.classList.add('slide-up');
-      
-//             nextLink[i].classList.add('slide-up');
-        
-      
-//         setTimeout(function() {
+//         main.classList.add('fade-out');
+//         console.log('added fade-out')
+//         setTimeout(() => {
 //             window.location.href = href;
-//         },3000);
+//             console.log('changes pages');
+//         }, 900);
 //     });
 // }
+
+ });
+
+
+//nav scroll 
+
+const logo = document.querySelector('header');
+let previousScrollPosition = 0;
+
+const isScrollingDown = () => {
+  let goingDown = false;
+  const scrollPosition = window.scrollY;
+
+  if (scrollPosition > previousScrollPosition) {
+    goingDown = true;
+  }
+
+  previousScrollPosition = scrollPosition;
+  return goingDown;
+};
+
+window.addEventListener('scroll', function(event) {
+  if (isScrollingDown()) {
+    const headerHeight = logo.offsetHeight;
+    console.log(headerHeight);
+    console.log("scroll going down true");
+    logo.classList.add("scroll-down");
+    logo.style.top = "-111px";
+    logo.classList.remove("scroll-up");
+  } else {
+    console.log("scroll going up true");
+    logo.classList.add("scroll-up");
+    logo.classList.remove("scroll-down");
+      logo.style.top = "0"
+  }
+ 
+});
 
 
 //About page hero effect
@@ -116,10 +127,6 @@ window.addEventListener("scroll", checkpoints);
 //Page change slide up
 
 
-
-
-
-
 //use opacity to fade one image out on top of another. keep until you're done in case you want it
 // const fadeimg = document.querySelector('.fade-image');
 // const maxScrollPixels = 300; // Distance in pixels to complete the fade
@@ -135,4 +142,4 @@ window.addEventListener("scroll", checkpoints);
 //   let finalOpacity = Math.min(Math.max(calculatedOpacity, 0), 100);
 //   console.log (finalOpacity);
 
-// });
+ //});
