@@ -1,0 +1,223 @@
+{
+    "$schema": "https://schemas.wp.org/wp/7.0/theme.json",
+    "version": 3,
+    "settings": {
+        "appearanceTools": true,
+        "color": {
+            "palette": [
+                {
+                    "color": "#ffc61d",
+                    "name": "Golden",
+                    "slug": "custom-golden"
+                },
+                {
+                    "color": "#4773b8",
+                    "name": "Royal Blue",
+                    "slug": "custom-royal-blue"
+                },
+                {
+                    "color": "#f4932b",
+                    "name": "Orange",
+                    "slug": "custom-orange"
+                },
+                {
+                    "color": "#f7eeda",
+                    "name": "Cream",
+                    "slug": "custom-cream"
+                },
+                {
+                    "color": "#000",
+                    "name": "Black",
+                    "slug": "custom-black"
+                },
+                {
+                    "color": "#f9d780",
+                    "name": "Pale Golden",
+                    "slug": "custom-pale-golden"
+                },
+                {
+                    "color": "#778fb2",
+                    "name": "Pale Blue",
+                    "slug": "custom-pale-blue"
+                },
+                {
+                    "color": "#efb27b",
+                    "name": "Pale Orange",
+                    "slug": "custom-pale-orange"
+                }
+            ]
+        },
+        "layout": {
+            "contentSize": "620px",
+            "wideSize": "1000px"
+        },
+        "spacing": {
+            "units": [
+                "%",
+                "px",
+                "em",
+                "rem",
+                "vh",
+                "vw"
+            ]
+        },
+        "typography": {
+            "fontFamilies": [
+                {
+                    "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+                    "name": "System Font",
+                    "slug": "system-font"
+                },
+                {
+                    "name": "Inter",
+                    "slug": "inter",
+                    "fontFamily": "Inter, sans-serif",
+                    "fontFace": [
+                        {
+                            "src": [
+                                "file:./assets/fonts/inter/inter-600-normal.woff2"
+                            ],
+                            "fontWeight": "600",
+                            "fontStyle": "normal",
+                            "fontFamily": "Inter",
+                            "fontDisplay": "swap"
+                        },
+                        {
+                            "src": [
+                                "file:./assets/fonts/inter/inter-200-normal.woff2"
+                            ],
+                            "fontWeight": "200",
+                            "fontStyle": "normal",
+                            "fontFamily": "Inter",
+                            "fontDisplay": "swap"
+                        },
+                        {
+                            "src": [
+                                "file:./assets/fonts/inter/inter-400-normal.woff2"
+                            ],
+                            "fontWeight": "400",
+                            "fontStyle": "normal",
+                            "fontFamily": "Inter",
+                            "fontDisplay": "swap"
+                        }
+                    ]
+                }
+            ],
+            "fontSizes": [
+                {
+                    "fluid": {
+                        "max": "95px",
+                        "min": "56px"
+                    },
+                    "name": "Super",
+                    "size": "95px",
+                    "slug": "custom-1"
+                },
+                {
+                    "fluid": {
+                        "max": "108px",
+                        "min": "56px"
+                    },
+                    "name": "Mega",
+                    "size": "108px",
+                    "slug": "custom-2"
+                }
+            ]
+        },
+        "useRootPaddingAwareAlignments": true
+    },
+    "styles": {
+        "color": {
+            "background": "var(--wp--preset--color--custom-cream)",
+            "text": "var(--wp--preset--color--black)"
+        },
+        "elements": {
+    
+            "button": {
+                "color": {
+                    "background": "var(--wp--preset--color--custom-royal-blue)",
+                    "text": "var(--wp--preset--color--custom-cream)"
+                },
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--inter)",
+                    "fontStyle": "normal",
+                    "fontWeight": "400"
+                }
+            },
+            "h1": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--inter)",
+                    "fontSize": "var(--wp--preset--font-size--custom-1)",
+                    "fontStyle": "normal",
+                    "fontWeight": "600"
+                }
+            },
+            "h2": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--inter)",
+                    "fontSize": "var(--wp--preset--font-size--x-large)",
+                    "fontStyle": "normal",
+                    "fontWeight": "600",
+                    "lineHeight": "1.5"
+                }
+            },
+            "h3": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--inter)",
+                    "fontSize": "var(--wp--preset--font-size--large)",
+                    "fontStyle": "normal",
+                    "fontWeight": "400",
+                    "lineHeight": "1.5"
+                }
+            },
+            "h4": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--inter)"
+                }
+            },
+            "h5": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--inter)"
+                }
+            },
+            "h6": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--inter)"
+                }
+            },
+            "heading": {
+                "color": {
+                    "text": "var(--wp--preset--color--black)"
+                },
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--inter)",
+                    "fontStyle": "normal",
+                    "fontWeight": "600",
+                    "lineHeight": "1.5"
+                }
+            },
+            "link": {
+                "color": {
+                    "text": "var(--wp--preset--color--custom-royal-blue)"
+                }
+            }
+        },
+        "typography": {
+            "fontFamily": "var(--wp--preset--font-family--inter)",
+            "fontSize": "var(--wp--preset--font-size--medium)",
+            "fontStyle": "normal",
+            "fontWeight": "200"
+        }
+      
+    },
+    "templateParts": [
+        {
+            "area": "header",
+            "name": "header"
+        },
+        {
+            "area": "footer",
+            "name": "footer"
+        }
+    ]
+}

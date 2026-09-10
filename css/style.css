@@ -1,0 +1,153 @@
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  height: 100% !important;
+  object-fit: cover;
+}
+
+.client-intake-form input {
+  height: 50px;
+  border: 1px solid black;
+  background: transparent;
+}
+.client-intake-form label {
+  font-size: 28px;
+  font-weight: 400;
+}
+.client-intake-form .nf-field-label > span {
+  font-size: 28px;
+  font-weight: 400;
+}
+.client-intake-form .nf-field-element li label {
+  font-weight: 300;
+}
+.client-intake-form textarea {
+  background: transparent;
+}
+.client-intake-form input[type=radio] {
+  height: 100%;
+}
+
+#nf-form-2-cont {
+  width: 80%;
+  max-width: 80%;
+}
+
+.nf-form-fields-required {
+  display: none;
+}
+
+nf-fields-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+nf-field {
+  width: 100%;
+}
+@media screen and (min-width: 400px) {
+  nf-field {
+    width: 48%;
+  }
+}
+
+.fade-me {
+  opacity: 0;
+  -moz-transform: translateX(0) translateY(30px);
+  -webkit-transform: translateX(0) translateY(30px);
+  -o-transform: translateX(0) translateY(30px);
+  -ms-transform: translateX(0) translateY(30px);
+  transform: translateX(0) translateY(30px);
+  transition-property: all;
+  transition-duration: 0.7s;
+  transition-delay: 0;
+  transition-timing-function: cubic-bezier(0.34, 0.01, 0.45, 1.02);
+  -webkit-backface-visibility: hidden;
+  transition-timing-function: ease-out;
+}
+.fade-me.fade-delay {
+  transition-property: all;
+  transition-duration: 0.7s;
+  transition-delay: 0.4;
+  transition-timing-function: cubic-bezier(0.34, 0.01, 0.45, 1.02);
+  -webkit-backface-visibility: hidden;
+}
+.fade-me.faded-in {
+  opacity: 1;
+  -moz-transform: translateX(0) translateY(0);
+  -webkit-transform: translateX(0) translateY(0);
+  -o-transform: translateX(0) translateY(0);
+  -ms-transform: translateX(0) translateY(0);
+  transform: translateX(0) translateY(0);
+}
+
+/* Page Transition */
+.wp-theme-damsbaek-carpentry-custom {
+  animation: fade-in 0.7s forwards;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.wp-theme-damsbaek-carpentry-custom.fade-out {
+  animation: fade-out 0.7s forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-image {
+  clip-path: inset(0% 0% 0% 0%);
+}
+
+.project-link {
+  overflow: hidden;
+  aspect-ratio: 2/3;
+}
+.project-link img {
+  transform: scale(1);
+  transition: transform 0.25s ease-in-out;
+}
+.project-link:hover img {
+  transform: scale(1.05);
+  transition: transform 0.25s ease-in-out;
+}
+
+/* Opt-in for cross-document transitions */
+@view-transition {
+  navigation: auto;
+}
+::view-transition-group(*.project-transition) {
+  animation-duration: 5s;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+::view-transition-old(*.project-transition),
+::view-transition-new(*.project-transition) {
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* Accessible design: Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+}

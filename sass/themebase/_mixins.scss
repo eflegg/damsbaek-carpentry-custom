@@ -1,0 +1,77 @@
+@mixin animate($property, $duration, $delay) {
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-delay: $delay;
+  transition-timing-function: cubic-bezier(0.34, 0.01, 0.45, 1.02);
+  -webkit-backface-visibility: hidden;
+}
+
+@mixin translate($x, $y) {
+  -moz-transform: translateX($x) translateY($y);
+  -webkit-transform: translateX($x) translateY($y);
+  -o-transform: translateX($x) translateY($y);
+  -ms-transform: translateX($x) translateY($y);
+  transform: translateX($x) translateY($y);
+}
+
+// See: http://a11yproject.com/posts/how-to-hide-content/
+
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+// Use in conjunction with .sr-only to only display content when it's focused.
+//
+// Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+//
+// Credit: HTML5 Boilerplate
+
+@mixin sr-only-focusable {
+  &:active,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}
+@mixin media($point) {
+  @if $point == xs {
+    @media screen and (min-width: 400px) {
+      @content;
+    }
+  } @else if $point == sm {
+    @media screen and (min-width: 600px) {
+      @content;
+    }
+  } @else if $point == md {
+    @media screen and (min-width: 800px) {
+      @content;
+    }
+  } @else if $point == lg {
+    @media screen and (min-width: 1000px) {
+      @content;
+    }
+  } @else if $point == xl {
+    @media screen and (min-width: 1250px) {
+      @content;
+    }
+  } @else if $point == xxl {
+    @media screen and (min-width: 1400px) {
+      @content;
+    }
+  } @else if $point == xxxl {
+    @media screen and (min-width: 1600px) {
+      @content;
+    }
+  }
+}

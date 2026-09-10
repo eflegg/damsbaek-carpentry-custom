@@ -1,0 +1,46 @@
+.client-intake-form {
+  input {
+    height: 50px;
+    border: 1px solid black;
+    background: transparent;
+  }
+  label {
+    font-size: 28px;
+    font-weight: 400;
+  }
+  .nf-field-label > span {
+    font-size: 28px;
+    font-weight: 400;
+  }
+  .nf-field-element li label {
+    font-weight: 300;
+  }
+  textarea {
+    background: transparent;
+  }
+  input[type="radio"] {
+    height: 100%;
+  }
+}
+#nf-form-2-cont {
+  width: 80%;
+  max-width: 80%;
+}
+
+.nf-form-fields-required {
+  display: none;
+}
+
+nf-fields-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+nf-field {
+  width: 100%;
+  @media screen and (min-width: 400px) {
+    width: 48%;
+  }
+}
+.nf-form-content {
+}
