@@ -9,6 +9,7 @@ img {
 
 header {
   background: var(--wp--preset--color--custom-cream);
+  border-bottom: 1px solid black;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -17,13 +18,11 @@ header.scroll-up {
   position: sticky;
   top: 0;
   transition: all 0.25s ease-out;
-  border-bottom: 1px solid black;
 }
 header.scroll-down {
   position: relative;
   top: 0;
   transition: all 0.25s ease-in;
-  border-bottom: 0px;
 }
 
 .client-intake-form input {
