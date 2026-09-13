@@ -28,21 +28,29 @@ function dc_custom_scripts()
         '1.0.0', // Version number
         true // Load in the footer (Highly recommended for page performance)
     );
+    wp_enqueue_script(
+        'projects-js', // Unique handle name for the script
+        get_stylesheet_directory_uri() . '/js/dc-custom-projects.js', // File path location
+        array(), // Dependencies (e.g., array('jquery') if your code relies on jQuery)
+        '1.0.0', // Version number
+        true // Load in the footer (Highly recommended for page performance)
+    );
     // Pass the post ID to your script
     wp_localize_script('fse-custom-js', 'wpData', array(
         'postId' => get_the_ID() // Grabs current post ID
     ));
 
+
     $parent_page_id = 45;
-    // if (is_page($parent_page_id) || (is_page() && $post->post_parent == $parent_page_id)) {
-    //     wp_enqueue_script(
-    //         'projects-js', // Unique handle name for the script
-    //         get_stylesheet_directory_uri() . '/js/dc-custom-projects.js', // File path location
-    //         array(), // Dependencies (e.g., array('jquery') if your code relies on jQuery)
-    //         '1.0.0', // Version number
-    //         true // Load in the footer (Highly recommended for page performance)
-    //     );
-    //}
+    if (is_page($parent_page_id) || (is_page() && $post->post_parent == $parent_page_id)) {
+        wp_enqueue_script(
+            'projects-js', // Unique handle name for the script
+            get_stylesheet_directory_uri() . '/js/dc-custom-projects.js', // File path location
+            array(), // Dependencies (e.g., array('jquery') if your code relies on jQuery)
+            '1.0.0', // Version number
+            true // Load in the footer (Highly recommended for page performance)
+        );
+    }
 
     wp_enqueue_style(
         'custom-style',
