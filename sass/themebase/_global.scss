@@ -12,7 +12,7 @@ header {
   border-bottom: 1px solid black;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 20;
   &.scroll-up {
     position: sticky;
     top: 0;
@@ -23,4 +23,21 @@ header {
     top: 0;
     transition: all 0.25s ease-in;
   }
+}
+
+.scale-text_container {
+  container-type: inline-size;
+  width: 100%;
+}
+.scale-text {
+  display: block;
+
+  /* 2. Dynamically scale font-size based on container width (12cqi = 12% of container width) */
+  /* clamp(minimum_size, fluid_target_size, maximum_size) */
+  // font-size: clamp(108px, 100cqi, 300px) !important;
+  font-size: 19cqi !important;
+
+  /* 3. Safety measures to prevent overflow */
+  overflow-wrap: break-word;
+  text-wrap: balance;
 }

@@ -46,5 +46,9 @@ nf-field {
 }
 
 .footer-sign-up {
-  border: 2px solid blue;
+  input {
+    height: 50px;
+    border: 1px solid black;
+    background: transparent;
+  }
 }

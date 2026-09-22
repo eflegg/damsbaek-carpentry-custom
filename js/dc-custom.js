@@ -103,8 +103,11 @@ const elementIsVisibleInViewport = (el, partiallyVisible = false) => {
   const { top, left, bottom, right } = el.getBoundingClientRect();
   const { innerHeight, innerWidth } = window;
   return partiallyVisible
-    ? ((top > 0 && top < innerHeight) ||
-        (bottom > 0 && bottom < innerHeight)) &&
+    ? ((top > 0 && top < innerHeight) 
+    ||
+        (bottom > 0 && bottom < innerHeight)
+      ) 
+        &&
         ((left > 0 && left < innerWidth) || (right > 0 && right < innerWidth))
     : top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
 };
@@ -114,9 +117,9 @@ function checkpoints(){
   const visible = elementIsVisibleInViewport(waypoint);
   if(visible){
     waypoint.classList.add('faded-in')
-    // console.log('faded in');
+    console.log('faded in');
   } else {
-    // console.log('not visible');
+    console.log('not visible');
   }
   })
 }
@@ -124,22 +127,20 @@ function checkpoints(){
 
 window.addEventListener("scroll", checkpoints);
 
-//Page change slide up
+//intersection observer photo animation on scroll
+const hidden_elements = document.querySelectorAll('.zoom-me')
 
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('zoomed');
+        }
+        else{
+            entry.target.classList.remove('zoomed')
+        }
+    })
+});
 
-//use opacity to fade one image out on top of another. keep until you're done in case you want it
-// const fadeimg = document.querySelector('.fade-image');
-// const maxScrollPixels = 300; // Distance in pixels to complete the fade
-
-// window.addEventListener('scroll', () => {
-//   let scrollPosition = window.scrollY;
-  
-//   // Calculate opacity: 0 at top, 1 when scrolled by maxScrollPixels
-//   let calculatedOpacity = scrollPosition / maxScrollPixels;
-  
-  
-//   // Keep the value locked safely between 0 and 1
-//   let finalOpacity = Math.min(Math.max(calculatedOpacity, 0), 100);
-//   console.log (finalOpacity);
-
- //});
+hidden_elements.forEach(el => {
+    observer.observe(el);
+});

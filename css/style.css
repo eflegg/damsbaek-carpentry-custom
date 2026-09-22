@@ -12,7 +12,7 @@ header {
   border-bottom: 1px solid black;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 20;
 }
 header.scroll-up {
   position: sticky;
@@ -23,6 +23,21 @@ header.scroll-down {
   position: relative;
   top: 0;
   transition: all 0.25s ease-in;
+}
+
+.scale-text_container {
+  container-type: inline-size;
+  width: 100%;
+}
+
+.scale-text {
+  display: block;
+  /* 2. Dynamically scale font-size based on container width (12cqi = 12% of container width) */
+  /* clamp(minimum_size, fluid_target_size, maximum_size) */
+  font-size: 19cqi !important;
+  /* 3. Safety measures to prevent overflow */
+  overflow-wrap: break-word;
+  text-wrap: balance;
 }
 
 .client-intake-form input {
@@ -71,8 +86,10 @@ nf-field {
   }
 }
 
-.footer-sign-up {
-  border: 2px solid blue;
+.footer-sign-up input {
+  height: 50px;
+  border: 1px solid black;
+  background: transparent;
 }
 
 .fade-me {
@@ -83,7 +100,7 @@ nf-field {
   -ms-transform: translateX(0) translateY(30px);
   transform: translateX(0) translateY(30px);
   transition-property: all;
-  transition-duration: 0.7s;
+  transition-duration: 0.5s;
   transition-delay: 0;
   transition-timing-function: cubic-bezier(0.34, 0.01, 0.45, 1.02);
   -webkit-backface-visibility: hidden;
@@ -91,7 +108,7 @@ nf-field {
 }
 .fade-me.fade-delay {
   transition-property: all;
-  transition-duration: 0.7s;
+  transition-duration: 0.5s;
   transition-delay: 0.4;
   transition-timing-function: cubic-bezier(0.34, 0.01, 0.45, 1.02);
   -webkit-backface-visibility: hidden;
@@ -103,6 +120,25 @@ nf-field {
   -o-transform: translateX(0) translateY(0);
   -ms-transform: translateX(0) translateY(0);
   transform: translateX(0) translateY(0);
+}
+.fade-me.faded-in img {
+  transform: scale(1);
+}
+
+.zoom-me {
+  overflow: hidden;
+}
+.zoom-me img {
+  transform: scale(0.95);
+  border: 2px solid hotpink;
+  transition: all 0.7s;
+  filter: blur(5px);
+}
+.zoom-me.zoomed img {
+  filter: blur(0);
+  transform: scale(1);
+  border: 2px solid slateblue;
+  transition: all 0.7s;
 }
 
 /* Page Transition */
@@ -211,4 +247,7 @@ nf-field {
   @view-transition {
     navigation: none;
   }
+}
+.wp-block-cb-carousel-v2.alignfull .cb-button-prev {
+  left: 140px;
 }
