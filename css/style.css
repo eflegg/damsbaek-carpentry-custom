@@ -13,6 +13,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 20;
+  transition: all 0.25s ease-in;
 }
 header.scroll-up {
   position: sticky;
@@ -43,7 +44,7 @@ header.scroll-down {
 .client-intake-form input {
   height: 50px;
   border: 1px solid black;
-  background: transparent;
+  background: rgba(119, 143, 178, 0.5);
 }
 .client-intake-form label {
   font-size: 28px;
@@ -57,7 +58,7 @@ header.scroll-down {
   font-weight: 300;
 }
 .client-intake-form textarea {
-  background: transparent;
+  background: rgba(119, 143, 178, 0.5);
 }
 .client-intake-form input[type=radio] {
   height: 100%;
@@ -89,7 +90,18 @@ nf-field {
 .footer-sign-up input {
   height: 50px;
   border: 1px solid black;
-  background: transparent;
+  background: rgba(119, 143, 178, 0.5);
+}
+
+input[type=submit] {
+  height: 100%;
+  background-color: #778fb2;
+  background: rgba(119, 143, 178, 0.5);
+  padding: 10px 20px;
+  font-size: 24px;
+  color: #d9d9d9;
+  color: black;
+  font-weight: 300;
 }
 
 .fade-me {
@@ -130,14 +142,12 @@ nf-field {
 }
 .zoom-me img {
   transform: scale(0.95);
-  border: 2px solid hotpink;
   transition: all 0.7s;
   filter: blur(5px);
 }
 .zoom-me.zoomed img {
   filter: blur(0);
   transform: scale(1);
-  border: 2px solid slateblue;
   transition: all 0.7s;
 }
 

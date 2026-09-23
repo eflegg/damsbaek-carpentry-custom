@@ -52,13 +52,13 @@ const isScrollingDown = () => {
 window.addEventListener('scroll', function(event) {
   if (isScrollingDown()) {
     const headerHeight = logo.offsetHeight;
-    console.log(headerHeight);
-    console.log("scroll going down true");
+    // console.log(headerHeight);
+    // console.log("scroll going down true");
     logo.classList.add("scroll-down");
     logo.style.top = "-111px";
     logo.classList.remove("scroll-up");
   } else {
-    console.log("scroll going up true");
+    // console.log("scroll going up true");
     logo.classList.add("scroll-up");
     logo.classList.remove("scroll-down");
       logo.style.top = "0"
@@ -117,9 +117,9 @@ function checkpoints(){
   const visible = elementIsVisibleInViewport(waypoint);
   if(visible){
     waypoint.classList.add('faded-in')
-    console.log('faded in');
+    // console.log('faded in');
   } else {
-    console.log('not visible');
+    // console.log('not visible');
   }
   })
 }
@@ -143,4 +143,20 @@ const observer = new IntersectionObserver(entries => {
 
 hidden_elements.forEach(el => {
     observer.observe(el);
+});
+
+//intersection observer photo animation on scroll
+const fadeElements = document.querySelectorAll('.fade-me')
+
+const fadeBbserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('faded-in');
+        }
+       
+    })
+});
+
+fadeElements.forEach(el => {
+    fadeBbserver.observe(el);
 });

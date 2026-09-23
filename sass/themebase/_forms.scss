@@ -2,7 +2,7 @@
   input {
     height: 50px;
     border: 1px solid black;
-    background: transparent;
+    background: rgba(119, 143, 178, 0.5);
   }
   label {
     font-size: 28px;
@@ -16,7 +16,7 @@
     font-weight: 300;
   }
   textarea {
-    background: transparent;
+    background: rgba(119, 143, 178, 0.5);
   }
   input[type="radio"] {
     height: 100%;
@@ -49,6 +49,17 @@ nf-field {
   input {
     height: 50px;
     border: 1px solid black;
-    background: transparent;
+    background: rgba(119, 143, 178, 0.5);
   }
+}
+
+input[type="submit"] {
+  height: 100%;
+  background-color: #778fb2;
+  background: rgba(119, 143, 178, 0.5);
+  padding: 10px 20px;
+  font-size: 24px;
+  color: #d9d9d9;
+  color: black;
+  font-weight: 300;
 }
