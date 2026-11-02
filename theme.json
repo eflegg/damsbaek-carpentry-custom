@@ -63,6 +63,67 @@
         },
         "typography": {
             "fontFamilies": [
+                 {
+          "fontFamily": "\"articulat-cf\", sans-serif",
+          "name": "Articulat CF (Adobe)",
+          "slug": "articulat-cf",
+          "fontFace": [
+             {
+                            "src": [
+                                "https://use.typekit.net/lqg1ceb.css"
+                            ],
+                            "fontWeight": "200",
+                            "fontStyle": "normal",
+                            "fontFamily": "Articulat CF (Adobe)",
+                            "fontDisplay": "swap"
+                        },             
+            {
+                            "src": [
+                                "https://use.typekit.net/lqg1ceb.css"
+                            ],
+                            "fontWeight": "300",
+                            "fontStyle": "normal",
+                            "fontFamily": "Articulat CF (Adobe)",
+                            "fontDisplay": "swap"
+                        },
+                         {
+                            "src": [
+                                "https://use.typekit.net/lqg1ceb.css"
+                            ],
+                            "fontWeight": "400",
+                            "fontStyle": "normal",
+                            "fontFamily": "Articulat CF (Adobe)",
+                            "fontDisplay": "swap"
+                        },
+                         {
+                            "src": [
+                                "https://use.typekit.net/lqg1ceb.css"
+                            ],
+                            "fontWeight": "600",
+                            "fontStyle": "normal",
+                            "fontFamily": "Articulat CF (Adobe)",
+                            "fontDisplay": "swap"
+                        },
+                         {
+                            "src": [
+                                "https://use.typekit.net/lqg1ceb.css"
+                            ],
+                            "fontWeight": "800",
+                            "fontStyle": "normal",
+                            "fontFamily": "Articulat CF (Adobe)",
+                            "fontDisplay": "swap"
+                        },
+                         {
+                            "src": [
+                                "https://use.typekit.net/lqg1ceb.css"
+                            ],
+                            "fontWeight": "900",
+                            "fontStyle": "normal",
+                            "fontFamily": "Articulat CF (Adobe)",
+                            "fontDisplay": "swap"
+                        }
+                    ]
+        },
                 {
                     "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
                     "name": "System Font",

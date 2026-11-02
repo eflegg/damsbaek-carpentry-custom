@@ -56,12 +56,14 @@ window.addEventListener('scroll', function(event) {
     // console.log("scroll going down true");
     logo.classList.add("scroll-down");
     logo.style.top = "-111px";
+    logo.style.transition = "all 0.25s ease-in";
     logo.classList.remove("scroll-up");
   } else {
     // console.log("scroll going up true");
     logo.classList.add("scroll-up");
     logo.classList.remove("scroll-down");
-      logo.style.top = "0"
+      logo.style.top = "0";
+          logo.style.transition = "all 0.25s ease-in";
   }
  
 });
