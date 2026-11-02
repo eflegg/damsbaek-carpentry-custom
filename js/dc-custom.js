@@ -56,12 +56,14 @@ window.addEventListener('scroll', function(event) {
     // console.log("scroll going down true");
     logo.classList.add("scroll-down");
     logo.style.top = "-111px";
+    logo.style.transition = "all 0.25s ease-in";
     logo.classList.remove("scroll-up");
   } else {
     // console.log("scroll going up true");
     logo.classList.add("scroll-up");
     logo.classList.remove("scroll-down");
-      logo.style.top = "0"
+      logo.style.top = "0";
+          logo.style.transition = "all 0.25s ease-in";
   }
  
 });
@@ -80,11 +82,11 @@ window.addEventListener('scroll', function(event) {
     //   console.log(scrollFraction);
       
       // 2. Map the percentage to your target clip-path range (e.g., 100% down to 0%)
-      const dynamicValue = 0 + (scrollFraction * 100 * 2);
-    //   console.log(dynamicValue);
+      const dynamicValue = 5 + (scrollFraction * 100 * 2);
+    // console.log(dynamicValue);
 
       const dynamicScaleValue = 1 + scrollFraction;
-    //   console.log(dynamicScaleValue);
+    console.log(dynamicScaleValue);
       
       // 3. Update only the targeted X-coordinate of the top-right and bottom-right corners
       if (clipper) {

@@ -59,8 +59,26 @@ function dc_custom_scripts()
         '1.0.0',
         'all'
     );
+
+    $adobe_url = 'https://use.typekit.net/lqg1ceb.css';
+
+    // Enqueue for the front-end website
+    wp_enqueue_style('dc-adobe-fonts', $adobe_url, array(), null);
 }
 add_action('wp_enqueue_scripts', 'dc_custom_scripts');
+
+
+
+//add adobe font to editor
+function dc_editor_adobe_fonts()
+{
+
+    $adobe_url = 'https://use.typekit.net/lqg1ceb.css';
+    // Enqueue for the Gutenberg Block Editor preview
+    add_editor_style($adobe_url);
+}
+add_action('enqueue_block_assets', 'dc_editor_adobe_fonts');
+
 
 
 function add_view_transition_to_post_thumbnail($html, $post_id, $post_thumbnail_id, $size, $attr)

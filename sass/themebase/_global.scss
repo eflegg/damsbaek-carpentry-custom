@@ -1,6 +1,31 @@
 html {
   scroll-behavior: smooth;
 }
+body {
+  overflow-x: hidden;
+}
+
+p,
+.wp-block-paragraph {
+  // font-variant-ligatures: none !important;
+  // font-feature-settings:
+  //   "liga" 0,
+  //   "clig" 0 !important;
+  // border: 2px solid yellow;
+  // font-variant-ligatures: none;
+  // font-kerning: none;
+  // font-variant-numeric: tabular-nums;
+  // font-feature-settings: "tnum";
+  // border: 2px solid blue;
+  font-variant-numeric: proportional-nums; /* Enables 'pnum' */
+}
+
+/* Force tabular figures in all Gutenberg Table blocks */
+.wp-block-table {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  border: 2px solid blue;
+}
 
 img {
   height: 100% !important;
@@ -11,17 +36,17 @@ header {
   background: var(--wp--preset--color--custom-cream);
   border-bottom: 1px solid black;
   position: sticky;
-  top: 0;
   z-index: 20;
   transition: all 0.25s ease-in;
   &.scroll-up {
     position: sticky;
-    top: 0;
-    transition: all 0.25s ease-out;
+
+    // top: 0;
+    // transition: all 0.25s ease-out;
   }
   &.scroll-down {
     position: relative;
-    top: 0;
+    // top: -111px;
     transition: all 0.25s ease-in;
   }
 }

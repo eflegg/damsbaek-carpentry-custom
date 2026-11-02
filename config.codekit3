@@ -7,7 +7,7 @@
       "uuidString" : "A14A8133-9A0F-4B4D-A73E-40AD6F1FB6CA"
     }
   ],
-  "creatorBuild" : "34921",
+  "creatorBuild" : "36870",
   "files" : {
     "\/assets\/fonts\/inter\/inter-200-normal.woff2" : {
       "cB" : 0,
@@ -40,7 +40,7 @@
       "oAP" : "\/assets\/images\/logo.png",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 90,
@@ -53,7 +53,7 @@
       "oAP" : "\/assets\/images\/shelvesgraphic.png",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 90,
@@ -61,7 +61,6 @@
     },
     "\/css\/style.css" : {
       "aP" : 1,
-      "bl" : 0,
       "ci" : 0,
       "co" : 0,
       "ft" : 16,
@@ -165,7 +164,6 @@
     },
     "\/sass\/style.scss" : {
       "aP" : 0,
-      "bl" : 0,
       "co" : 0,
       "ec" : 1,
       "ft" : 4,
@@ -178,7 +176,6 @@
     },
     "\/sass\/themebase\/_carousel.scss" : {
       "aP" : 0,
-      "bl" : 0,
       "co" : 0,
       "ec" : 1,
       "ft" : 4,
@@ -191,7 +188,6 @@
     },
     "\/sass\/themebase\/_fademe.scss" : {
       "aP" : 0,
-      "bl" : 0,
       "co" : 0,
       "ec" : 1,
       "ft" : 4,
@@ -204,7 +200,6 @@
     },
     "\/sass\/themebase\/_forms.scss" : {
       "aP" : 0,
-      "bl" : 0,
       "co" : 0,
       "ec" : 1,
       "ft" : 4,
@@ -217,7 +212,6 @@
     },
     "\/sass\/themebase\/_global.scss" : {
       "aP" : 0,
-      "bl" : 0,
       "co" : 0,
       "ec" : 1,
       "ft" : 4,
@@ -230,7 +224,6 @@
     },
     "\/sass\/themebase\/_index.scss" : {
       "aP" : 0,
-      "bl" : 0,
       "co" : 0,
       "ec" : 1,
       "ft" : 4,
@@ -243,7 +236,6 @@
     },
     "\/sass\/themebase\/_mixins.scss" : {
       "aP" : 0,
-      "bl" : 0,
       "co" : 0,
       "ec" : 1,
       "ft" : 4,
@@ -261,7 +253,7 @@
       "oAP" : "\/screenshot.png",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 90,
@@ -269,7 +261,6 @@
     },
     "\/style-min.css" : {
       "aP" : 1,
-      "bl" : 0,
       "ci" : 0,
       "co" : 0,
       "ft" : 16,
@@ -281,7 +272,6 @@
     },
     "\/style.css" : {
       "aP" : 1,
-      "bl" : 0,
       "ci" : 0,
       "co" : 0,
       "ft" : 16,
@@ -631,10 +621,6 @@
     },
     "babelRetainLines" : 0,
     "babelUseBuiltInsType" : 0,
-    "bowerAbbreviatedPath" : "bower_components",
-    "bowerForceLatestOnConflict" : 1,
-    "bowerTargetDependencyListType" : 1,
-    "bowerUseExactVersion" : 0,
     "browserRefreshDelay" : 0,
     "browserslistString" : ">0.2%, last 2 versions, Firefox ESR, not dead",
     "buildEnvironment" : 1,
@@ -1368,7 +1354,6 @@
       "cssoStyle" : 0,
       "purgeCSSStyle" : 0,
       "shouldRunAutoprefixer" : 1,
-      "shouldRunBless" : 0,
       "sourceMapStyle" : 0
     },
     "languageDefaultsGIF" : {
@@ -1457,7 +1442,6 @@
       "purgeCSSStyle" : 0,
       "rewriteURLStyle" : 0,
       "shouldRunAutoprefixer" : 0,
-      "shouldRunBless" : 0,
       "sourceMapStyle" : 0,
       "strictImports" : 0,
       "strictUnits" : 0
@@ -1529,7 +1513,6 @@
       "outputStyle" : 0,
       "purgeCSSStyle" : 0,
       "shouldRunAutoprefixer" : 0,
-      "shouldRunBless" : 0,
       "sourceMapStyle" : 0
     },
     "languageDefaultsSLIM" : {
@@ -1561,7 +1544,6 @@
       "purgeCSSStyle" : 0,
       "resolveRelativeURLS" : 0,
       "shouldRunAutoprefixer" : 0,
-      "shouldRunBless" : 0,
       "sourceMapStyle" : 0
     },
     "languageDefaultsSVG" : {
@@ -1571,7 +1553,9 @@
       "autoOutputPathReplace1" : "",
       "autoOutputPathReplace2" : "",
       "autoOutputPathStyle" : 0,
-      "pluginMask" : 52780316221407
+      "pluginMask" : 52780316221407,
+      "prettyPrinted" : 0,
+      "useMultipass" : 0
     },
     "languageDefaultsTS" : {
       "autoOutputAction" : 0,
@@ -1580,12 +1564,13 @@
       "autoOutputPathReplace1" : "",
       "autoOutputPathReplace2" : "",
       "autoOutputPathStyle" : 0,
+      "bundleFormat" : 4,
       "createDeclarationFile" : 0,
       "jsxMode" : 0,
       "minifierStyle" : 0,
       "moduleDetectionType" : 0,
-      "moduleResolutionType" : 0,
-      "moduleType" : 2,
+      "moduleResolutionType" : 5,
+      "moduleType" : 5,
       "removeComments" : 0,
       "sourceMapStyle" : 0,
       "targetECMAVersion" : 2018
@@ -1593,6 +1578,16 @@
     "languageDefaultsUserDefined" : [
 
     ],
+    "languageDefaultsWEBP" : {
+      "autoOutputAction" : 0,
+      "autoOutputPathFilenamePattern" : "*.webp",
+      "autoOutputPathRelativePath" : "",
+      "autoOutputPathReplace1" : "",
+      "autoOutputPathReplace2" : "",
+      "autoOutputPathStyle" : 0,
+      "optimizationPresetUUID" : "lpckwebp-default",
+      "rgbQuality" : 75
+    },
     "npmAbbreviatedPath" : "",
     "npmCreatePackageLock" : 1,
     "npmInstallOptionalDependencies" : 0,
@@ -1647,15 +1642,12 @@
     "susyVersion" : 3,
     "tsAllowArbitraryExtensions" : 0,
     "tsAllowImportingTSExtensions" : 0,
-    "tsAllowSyntheticDefaultImports" : 0,
     "tsAllowUMDGlobalAccess" : 0,
     "tsAllowUnreachableCode" : 0,
     "tsAllowUnusedLabels" : 0,
-    "tsAlwaysStrict" : 0,
-    "tsDownlevelIteration" : 0,
+    "tsConfigFileHandlingType" : 0,
     "tsEmitBOM" : 0,
     "tsEmitDecoratorMetadata" : 0,
-    "tsESModuleInterop" : 0,
     "tsExactOptionalPropertyTypes" : 0,
     "tsExperimentalDecorators" : 0,
     "tsForceConsistentCasingInFileNames" : 1,
@@ -1663,6 +1655,7 @@
     "tsIsolatedModules" : 0,
     "tsJSXFactory" : "React.createElement",
     "tsJSXFragmentFactory" : "Fragment",
+    "tsLibString" : "",
     "tsNoEmitHelpers" : 0,
     "tsNoFallthroughCasesInSwitch" : 0,
     "tsNoImplicitAny" : 0,
@@ -1673,6 +1666,7 @@
     "tsNoPropertyAccessFromIndexSignature" : 0,
     "tsNoResolve" : 0,
     "tsNoUncheckedIndexAccess" : 0,
+    "tsNoUncheckedSideEffectImports" : 0,
     "tsNoUnusedLocals" : 0,
     "tsNoUnusedParameters" : 0,
     "tsPreserveConstEnums" : 0,
@@ -1685,6 +1679,7 @@
     "tsStrictNullChecks" : 0,
     "tsStrictPropertyInitialization" : 0,
     "tsStripInternal" : 0,
+    "tsTypesString" : "*",
     "tsUseDefineForClassFields" : 0,
     "tsUseUnknownInCatchVariables" : 0,
     "tsVerbatimModuleSyntax" : 0,
