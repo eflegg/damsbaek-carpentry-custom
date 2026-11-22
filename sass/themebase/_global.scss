@@ -1,54 +1,14 @@
 html {
   scroll-behavior: smooth;
+  // overflow-x: hidden;
 }
 body {
+  overflow-x: hidden !important;
+}
+.entry-content {
   overflow-x: hidden;
+  max-width: 100vw;
 }
-
-p,
-.wp-block-paragraph {
-  // font-variant-ligatures: none !important;
-  // font-feature-settings:
-  //   "liga" 0,
-  //   "clig" 0 !important;
-  // border: 2px solid yellow;
-  // font-variant-ligatures: none;
-  // font-kerning: none;
-  // font-variant-numeric: tabular-nums;
-  // font-feature-settings: "tnum";
-  // border: 2px solid blue;
-  font-variant-numeric: proportional-nums; /* Enables 'pnum' */
-}
-
-/* Force tabular figures in all Gutenberg Table blocks */
-.wp-block-table {
-  font-variant-numeric: tabular-nums;
-  font-feature-settings: "tnum";
-  border: 2px solid blue;
-}
-
-p,
-.wp-block-paragraph {
-  // font-variant-ligatures: none !important;
-  // font-feature-settings:
-  //   "liga" 0,
-  //   "clig" 0 !important;
-  // border: 2px solid yellow;
-  // font-variant-ligatures: none;
-  // font-kerning: none;
-  // font-variant-numeric: tabular-nums;
-  // font-feature-settings: "tnum";
-  // border: 2px solid blue;
-  font-variant-numeric: proportional-nums; /* Enables 'pnum' */
-}
-
-/* Force tabular figures in all Gutenberg Table blocks */
-.wp-block-table {
-  font-variant-numeric: tabular-nums;
-  font-feature-settings: "tnum";
-  border: 2px solid blue;
-}
-
 img {
   height: 100% !important;
   object-fit: cover;
