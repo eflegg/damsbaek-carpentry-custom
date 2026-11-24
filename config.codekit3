@@ -9,30 +9,6 @@
   ],
   "creatorBuild" : "36870",
   "files" : {
-    "\/assets\/fonts\/inter\/inter-200-normal.woff2" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/fonts\/inter\/inter-200-normal.woff2",
-      "oF" : 0
-    },
-    "\/assets\/fonts\/inter\/inter-400-normal.woff2" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/fonts\/inter\/inter-400-normal.woff2",
-      "oF" : 0
-    },
-    "\/assets\/fonts\/inter\/inter-600-normal.woff2" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/fonts\/inter\/inter-600-normal.woff2",
-      "oF" : 0
-    },
     "\/assets\/images\/logo.png" : {
       "ft" : 32768,
       "iS" : 4163,

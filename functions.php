@@ -59,25 +59,9 @@ function dc_custom_scripts()
         '1.0.0',
         'all'
     );
-
-    $adobe_url = 'https://use.typekit.net/lqg1ceb.css';
-
-    // Enqueue for the front-end website
-    wp_enqueue_style('dc-adobe-fonts', $adobe_url, array(), null);
 }
 add_action('wp_enqueue_scripts', 'dc_custom_scripts');
 
-
-
-//add adobe font to editor
-function dc_editor_adobe_fonts()
-{
-
-    $adobe_url = 'https://use.typekit.net/lqg1ceb.css';
-    // Enqueue for the Gutenberg Block Editor preview
-    add_editor_style($adobe_url);
-}
-add_action('enqueue_block_assets', 'dc_editor_adobe_fonts');
 
 
 
@@ -133,7 +117,7 @@ function minify_js($buffer)
 {
     $buffer = preg_replace('/\s+/', ' ', $buffer); // Removes line breaks and excess whitespace
     $buffer = str_replace(array("\n", "\r", "\t"), '', $buffer); // Remove newlines, carriage returns, and tabs
-    $buffer = preg_replace('/\s*([{}|:;,])\s+/', '$1', $buffer); // Removes spaces around symbols like {, }, :, ; etc.
+    //$buffer = preg_replace('/\s*([{}|:;,])\s+/', '$1', $buffer); // Removes spaces around symbols like {, }, :, ; etc.
     $buffer = preg_replace('/;}/', '}', $buffer); // Removes unnecessary semi-colons before closing braces
     return $buffer;
 }
